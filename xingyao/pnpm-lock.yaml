@@ -7,12 +7,14 @@ devDependencies:
   '@vue/cli-plugin-eslint': registry.nlark.com/@vue/cli-plugin-eslint/4.5.13_a58cf9e4d577795b8c257bee96d49483
   '@vue/cli-plugin-router': registry.nlark.com/@vue/cli-plugin-router/4.5.13_@vue+cli-service@4.5.13
   '@vue/cli-service': registry.nlark.com/@vue/cli-service/4.5.13_0f25d1aa8415e98c3e62a4178f3c555d
-  '@vue/eslint-config-prettier': registry.nlark.com/@vue/eslint-config-prettier/6.0.0_cdeb9c66fb212eb7d78afc515eb369f6
+  '@vue/eslint-config-standard': registry.nlark.com/@vue/eslint-config-standard/5.1.2_cf4a11415eff43d7efc44512b655d1bb
   babel-eslint: registry.nlark.com/babel-eslint/10.1.0_eslint@6.8.0
   eslint: registry.nlark.com/eslint/6.8.0
-  eslint-plugin-prettier: registry.nlark.com/eslint-plugin-prettier/3.4.0_eslint@6.8.0+prettier@2.3.2
+  eslint-plugin-import: registry.nlark.com/eslint-plugin-import/2.24.0_eslint@6.8.0
+  eslint-plugin-node: registry.nlark.com/eslint-plugin-node/11.1.0_eslint@6.8.0
+  eslint-plugin-promise: registry.nlark.com/eslint-plugin-promise/4.3.1
+  eslint-plugin-standard: registry.nlark.com/eslint-plugin-standard/4.1.0_eslint@6.8.0
   eslint-plugin-vue: registry.nlark.com/eslint-plugin-vue/6.2.2_eslint@6.8.0
-  prettier: registry.nlark.com/prettier/2.3.2
   sass: registry.nlark.com/sass/1.37.5
   sass-loader: registry.nlark.com/sass-loader/8.0.2_sass@1.37.5
   vue-template-compiler: registry.nlark.com/vue-template-compiler/2.6.14
@@ -226,6 +228,17 @@ packages:
     resolution:
       integrity: sha1-gTWEAhliqenm/QOflA0S9WynhZ4=
       tarball: ansi-html/download/ansi-html-0.0.7.tgz
+  /array.prototype.flat/1.2.4:
+    dependencies:
+      call-bind: registry.nlark.com/call-bind/1.0.2
+      define-properties: registry.nlark.com/define-properties/1.1.3
+      es-abstract: registry.nlark.com/es-abstract/1.18.5
+    dev: true
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha1-bvY4tDMSvUAbTGGZ/ex+LcnpoSM=
+      tarball: array.prototype.flat/download/array.prototype.flat-1.2.4.tgz
   /batch/0.6.1:
     dev: true
     resolution:
@@ -307,6 +320,11 @@ packages:
     resolution:
       integrity: sha1-VTp7hEb/b2hDWcRF8eN6BdrMM90=
       tarball: file-uri-to-path/download/file-uri-to-path-1.0.0.tgz
+  /find-root/1.1.0:
+    dev: true
+    resolution:
+      integrity: sha1-q8/Iunb3CMQql7PWhbfpRQv7nOQ=
+      tarball: find-root/download/find-root-1.1.0.tgz
   /fresh/0.5.2:
     dev: true
     engines:
@@ -409,6 +427,16 @@ packages:
     resolution:
       integrity: sha1-oc5vucm8NWylLoklarWQWeE9AzI=
       tarball: raw-body/download/raw-body-2.4.0.tgz
+  /read-pkg-up/3.0.0:
+    dependencies:
+      find-up: registry.nlark.com/find-up/2.1.0
+      read-pkg: registry.nlark.com/read-pkg/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-PtSWaF26D4/hGNBpHcUfSh/5bwc=
+      tarball: read-pkg-up/download/read-pkg-up-3.0.0.tgz
   /send/0.17.1:
     dependencies:
       debug: registry.nlark.com/debug/2.6.9
@@ -2855,24 +2883,34 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/@vue/component-compiler-utils/download/@vue/component-compiler-utils-3.2.2.tgz
     version: 3.2.2
-  registry.nlark.com/@vue/eslint-config-prettier/6.0.0_cdeb9c66fb212eb7d78afc515eb369f6:
+  registry.nlark.com/@vue/eslint-config-standard/5.1.2_cf4a11415eff43d7efc44512b655d1bb:
     dependencies:
+      '@vue/cli-service': registry.nlark.com/@vue/cli-service/4.5.13_0f25d1aa8415e98c3e62a4178f3c555d
       eslint: registry.nlark.com/eslint/6.8.0
-      eslint-config-prettier: registry.nlark.com/eslint-config-prettier/6.15.0_eslint@6.8.0
-      eslint-plugin-prettier: registry.nlark.com/eslint-plugin-prettier/3.4.0_eslint@6.8.0+prettier@2.3.2
-      prettier: registry.nlark.com/prettier/2.3.2
+      eslint-config-standard: registry.nlark.com/eslint-config-standard/14.1.1_d3b047464d4d305fe7abe923ef0e1433
+      eslint-import-resolver-node: registry.nlark.com/eslint-import-resolver-node/0.3.5
+      eslint-import-resolver-webpack: registry.nlark.com/eslint-import-resolver-webpack/0.12.2_eslint-plugin-import@2.24.0
+      eslint-plugin-import: registry.nlark.com/eslint-plugin-import/2.24.0_eslint@6.8.0
+      eslint-plugin-node: registry.nlark.com/eslint-plugin-node/11.1.0_eslint@6.8.0
+      eslint-plugin-promise: registry.nlark.com/eslint-plugin-promise/4.3.1
+      eslint-plugin-standard: registry.nlark.com/eslint-plugin-standard/4.1.0_eslint@6.8.0
+      eslint-plugin-vue: registry.nlark.com/eslint-plugin-vue/6.2.2_eslint@6.8.0
     dev: true
-    id: registry.nlark.com/@vue/eslint-config-prettier/6.0.0
-    name: '@vue/eslint-config-prettier'
+    id: registry.nlark.com/@vue/eslint-config-standard/5.1.2
+    name: '@vue/eslint-config-standard'
     peerDependencies:
-      eslint: '>= 5.0.0'
-      eslint-plugin-prettier: ^3.1.0
-      prettier: '>= 1.13.0'
+      '@vue/cli-service': ^3.0.0 || ^4.0.0-0
+      eslint: '>=6.2.2'
+      eslint-plugin-import: '>= 2.18.0'
+      eslint-plugin-node: '>= 9.1.0'
+      eslint-plugin-promise: '>= 4.2.1'
+      eslint-plugin-standard: '>= 4.0.0'
+      eslint-plugin-vue: '>= 6.1.2'
     resolution:
-      integrity: sha1-rVkSswj0rkaEWOAqKwXbC50kZwA=
+      integrity: sha1-xdVa+JSjriO2Wxr0pCV3esAXC0I=
       registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/@vue/eslint-config-prettier/download/@vue/eslint-config-prettier-6.0.0.tgz
-    version: 6.0.0
+      tarball: https://registry.nlark.com/@vue/eslint-config-standard/download/@vue/eslint-config-standard-5.1.2.tgz
+    version: 5.1.2
   registry.nlark.com/@vue/preload-webpack-plugin/1.1.2_502c618fc8a7d35df07e93275324a2d0:
     dependencies:
       html-webpack-plugin: registry.nlark.com/html-webpack-plugin/3.2.0_webpack@4.46.0
@@ -3195,6 +3233,14 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/arr-union/download/arr-union-3.1.0.tgz
     version: 3.1.0
+  registry.nlark.com/array-find/1.0.0:
+    dev: true
+    name: array-find
+    resolution:
+      integrity: sha1-bI4obRHtdoMn+OYuzuhzU8o+eLg=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/array-find/download/array-find-1.0.0.tgz
+    version: 1.0.0
   registry.nlark.com/array-flatten/1.1.1:
     dev: true
     name: array-flatten
@@ -3211,6 +3257,22 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/array-flatten/download/array-flatten-2.1.2.tgz
     version: 2.1.2
+  registry.nlark.com/array-includes/3.1.3:
+    dependencies:
+      call-bind: registry.nlark.com/call-bind/1.0.2
+      define-properties: registry.nlark.com/define-properties/1.1.3
+      es-abstract: registry.nlark.com/es-abstract/1.18.5
+      get-intrinsic: registry.nlark.com/get-intrinsic/1.1.1
+      is-string: registry.nlark.com/is-string/1.0.7
+    dev: true
+    engines:
+      node: '>= 0.4'
+    name: array-includes
+    resolution:
+      integrity: sha1-x/YZs4KtKvr1Mmzd/cCvxhr3aQo=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/array-includes/download/array-includes-3.1.3.tgz
+    version: 3.1.3
   registry.nlark.com/array-union/1.0.2:
     dependencies:
       array-uniq: registry.nlark.com/array-uniq/1.0.3
@@ -5356,6 +5418,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/dns-txt/download/dns-txt-2.0.2.tgz
     version: 2.0.2
+  registry.nlark.com/doctrine/2.1.0:
+    dependencies:
+      esutils: registry.nlark.com/esutils/2.0.3
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    name: doctrine
+    resolution:
+      integrity: sha1-XNAfwQFiG0LEzX9dGmYkNxbT850=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/doctrine/download/doctrine-2.1.0.tgz
+    version: 2.1.0
   registry.nlark.com/doctrine/3.0.0:
     dependencies:
       esutils: registry.nlark.com/esutils/2.0.3
@@ -5626,6 +5700,20 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/end-of-stream/download/end-of-stream-1.4.4.tgz
     version: 1.4.4
+  registry.nlark.com/enhanced-resolve/0.9.1:
+    dependencies:
+      graceful-fs: registry.nlark.com/graceful-fs/4.2.8
+      memory-fs: registry.nlark.com/memory-fs/0.2.0
+      tapable: registry.nlark.com/tapable/0.1.10
+    dev: true
+    engines:
+      node: '>=0.6'
+    name: enhanced-resolve
+    resolution:
+      integrity: sha1-TW5omzcl+GCQknzMhs2fFjW4ni4=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/enhanced-resolve/download/enhanced-resolve-0.9.1.tgz
+    version: 0.9.1
   registry.nlark.com/enhanced-resolve/4.5.0:
     dependencies:
       graceful-fs: registry.nlark.com/graceful-fs/4.2.8
@@ -5749,21 +5837,62 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz
     version: 1.0.5
-  registry.nlark.com/eslint-config-prettier/6.15.0_eslint@6.8.0:
+  registry.nlark.com/eslint-config-standard/14.1.1_d3b047464d4d305fe7abe923ef0e1433:
     dependencies:
       eslint: registry.nlark.com/eslint/6.8.0
-      get-stdin: registry.nlark.com/get-stdin/6.0.0
+      eslint-plugin-import: registry.nlark.com/eslint-plugin-import/2.24.0_eslint@6.8.0
+      eslint-plugin-node: registry.nlark.com/eslint-plugin-node/11.1.0_eslint@6.8.0
+      eslint-plugin-promise: registry.nlark.com/eslint-plugin-promise/4.3.1
+      eslint-plugin-standard: registry.nlark.com/eslint-plugin-standard/4.1.0_eslint@6.8.0
     dev: true
-    hasBin: true
-    id: registry.nlark.com/eslint-config-prettier/6.15.0
-    name: eslint-config-prettier
+    id: registry.nlark.com/eslint-config-standard/14.1.1
+    name: eslint-config-standard
     peerDependencies:
-      eslint: '>=3.14.1'
+      eslint: '>=6.2.2'
+      eslint-plugin-import: '>=2.18.0'
+      eslint-plugin-node: '>=9.1.0'
+      eslint-plugin-promise: '>=4.2.1'
+      eslint-plugin-standard: '>=4.0.0'
     resolution:
-      integrity: sha1-f5P2y31FqS8VN6cOzAY2bhrG/tk=
+      integrity: sha1-gwqOROeu995nRkl5rQa0BgJsVuo=
       registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-6.15.0.tgz
-    version: 6.15.0
+      tarball: https://registry.nlark.com/eslint-config-standard/download/eslint-config-standard-14.1.1.tgz?cache=0&sync_timestamp=1621911069128&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-config-standard%2Fdownload%2Feslint-config-standard-14.1.1.tgz
+    version: 14.1.1
+  registry.nlark.com/eslint-import-resolver-node/0.3.5:
+    dependencies:
+      debug: registry.nlark.com/debug/3.2.7
+      resolve: registry.nlark.com/resolve/1.20.0
+    dev: true
+    name: eslint-import-resolver-node
+    resolution:
+      integrity: sha1-k5u7D3TheedXyof3pKiQ2r7RisQ=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-import-resolver-node/download/eslint-import-resolver-node-0.3.5.tgz
+    version: 0.3.5
+  registry.nlark.com/eslint-import-resolver-webpack/0.12.2_eslint-plugin-import@2.24.0:
+    dependencies:
+      array-find: registry.nlark.com/array-find/1.0.0
+      debug: registry.nlark.com/debug/2.6.9
+      enhanced-resolve: registry.nlark.com/enhanced-resolve/0.9.1
+      eslint-plugin-import: registry.nlark.com/eslint-plugin-import/2.24.0_eslint@6.8.0
+      find-root: 1.1.0
+      has: registry.nlark.com/has/1.0.3
+      interpret: registry.nlark.com/interpret/1.4.0
+      lodash: registry.nlark.com/lodash/4.17.21
+      node-libs-browser: registry.nlark.com/node-libs-browser/2.2.1
+      resolve: registry.nlark.com/resolve/1.20.0
+      semver: registry.nlark.com/semver/5.7.1
+    dev: true
+    id: registry.nlark.com/eslint-import-resolver-webpack/0.12.2
+    name: eslint-import-resolver-webpack
+    peerDependencies:
+      eslint-plugin-import: '>=1.4.0'
+      webpack: '>=1.11.0'
+    resolution:
+      integrity: sha1-dp6GzQx1KhU2wZhV69kKoUzjhO4=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-import-resolver-webpack/download/eslint-import-resolver-webpack-0.12.2.tgz
+    version: 0.12.2
   registry.nlark.com/eslint-loader/2.2.1_eslint@6.8.0+webpack@4.46.0:
     dependencies:
       eslint: registry.nlark.com/eslint/6.8.0
@@ -5785,24 +5914,110 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/eslint-loader/download/eslint-loader-2.2.1.tgz
     version: 2.2.1
-  registry.nlark.com/eslint-plugin-prettier/3.4.0_eslint@6.8.0+prettier@2.3.2:
+  registry.nlark.com/eslint-module-utils/2.6.2:
     dependencies:
-      eslint: registry.nlark.com/eslint/6.8.0
-      prettier: registry.nlark.com/prettier/2.3.2
-      prettier-linter-helpers: registry.nlark.com/prettier-linter-helpers/1.0.0
+      debug: registry.nlark.com/debug/3.2.7
+      pkg-dir: registry.nlark.com/pkg-dir/2.0.0
     dev: true
     engines:
-      node: '>=6.0.0'
-    id: registry.nlark.com/eslint-plugin-prettier/3.4.0
-    name: eslint-plugin-prettier
+      node: '>=4'
+    name: eslint-module-utils
+    resolution:
+      integrity: sha1-lOVUDdFf4VIuj/o+yNs7f6fnpTQ=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-module-utils/download/eslint-module-utils-2.6.2.tgz
+    version: 2.6.2
+  registry.nlark.com/eslint-plugin-es/3.0.1_eslint@6.8.0:
+    dependencies:
+      eslint: registry.nlark.com/eslint/6.8.0
+      eslint-utils: registry.nlark.com/eslint-utils/2.1.0
+      regexpp: registry.nlark.com/regexpp/3.2.0
+    dev: true
+    engines:
+      node: '>=8.10.0'
+    id: registry.nlark.com/eslint-plugin-es/3.0.1
+    name: eslint-plugin-es
+    peerDependencies:
+      eslint: '>=4.19.1'
+    resolution:
+      integrity: sha1-dafN/czdwFiZNK7rOEF18iHFeJM=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-plugin-es/download/eslint-plugin-es-3.0.1.tgz
+    version: 3.0.1
+  registry.nlark.com/eslint-plugin-import/2.24.0_eslint@6.8.0:
+    dependencies:
+      array-includes: registry.nlark.com/array-includes/3.1.3
+      array.prototype.flat: 1.2.4
+      debug: registry.nlark.com/debug/2.6.9
+      doctrine: registry.nlark.com/doctrine/2.1.0
+      eslint: registry.nlark.com/eslint/6.8.0
+      eslint-import-resolver-node: registry.nlark.com/eslint-import-resolver-node/0.3.5
+      eslint-module-utils: registry.nlark.com/eslint-module-utils/2.6.2
+      find-up: registry.nlark.com/find-up/2.1.0
+      has: registry.nlark.com/has/1.0.3
+      is-core-module: registry.nlark.com/is-core-module/2.5.0
+      minimatch: registry.nlark.com/minimatch/3.0.4
+      object.values: registry.nlark.com/object.values/1.1.4
+      pkg-up: registry.nlark.com/pkg-up/2.0.0
+      read-pkg-up: 3.0.0
+      resolve: registry.nlark.com/resolve/1.20.0
+      tsconfig-paths: registry.nlark.com/tsconfig-paths/3.10.1
+    dev: true
+    engines:
+      node: '>=4'
+    id: registry.nlark.com/eslint-plugin-import/2.24.0
+    name: eslint-plugin-import
+    peerDependencies:
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
+    resolution:
+      integrity: sha1-aX/9Jj4k2l6E4DsoL1+2IlF3cXc=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-plugin-import/download/eslint-plugin-import-2.24.0.tgz
+    version: 2.24.0
+  registry.nlark.com/eslint-plugin-node/11.1.0_eslint@6.8.0:
+    dependencies:
+      eslint: registry.nlark.com/eslint/6.8.0
+      eslint-plugin-es: registry.nlark.com/eslint-plugin-es/3.0.1_eslint@6.8.0
+      eslint-utils: registry.nlark.com/eslint-utils/2.1.0
+      ignore: registry.nlark.com/ignore/5.1.8
+      minimatch: registry.nlark.com/minimatch/3.0.4
+      resolve: registry.nlark.com/resolve/1.20.0
+      semver: registry.nlark.com/semver/6.3.0
+    dev: true
+    engines:
+      node: '>=8.10.0'
+    id: registry.nlark.com/eslint-plugin-node/11.1.0
+    name: eslint-plugin-node
+    peerDependencies:
+      eslint: '>=5.16.0'
+    resolution:
+      integrity: sha1-yVVEQW7kraJnQKMEdO78VALcZx0=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-plugin-node/download/eslint-plugin-node-11.1.0.tgz
+    version: 11.1.0
+  registry.nlark.com/eslint-plugin-promise/4.3.1:
+    dev: true
+    engines:
+      node: '>=6'
+    name: eslint-plugin-promise
+    resolution:
+      integrity: sha1-YUhd8qNZ4DFJ/a/AposOAwrSrEU=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-plugin-promise/download/eslint-plugin-promise-4.3.1.tgz
+    version: 4.3.1
+  registry.nlark.com/eslint-plugin-standard/4.1.0_eslint@6.8.0:
+    dependencies:
+      eslint: registry.nlark.com/eslint/6.8.0
+    dev: true
+    id: registry.nlark.com/eslint-plugin-standard/4.1.0
+    name: eslint-plugin-standard
     peerDependencies:
       eslint: '>=5.0.0'
-      prettier: '>=1.13.0'
     resolution:
-      integrity: sha1-zbrTvx29Kxd+mCVzf+Y7R2oI8Mc=
+      integrity: sha1-DDvzpn6FP4u7xYD7SUX78W9Bt8U=
       registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/eslint-plugin-prettier/download/eslint-plugin-prettier-3.4.0.tgz
-    version: 3.4.0
+      tarball: https://registry.nlark.com/eslint-plugin-standard/download/eslint-plugin-standard-4.1.0.tgz
+    version: 4.1.0
   registry.nlark.com/eslint-plugin-vue/6.2.2_eslint@6.8.0:
     dependencies:
       eslint: registry.nlark.com/eslint/6.8.0
@@ -5859,6 +6074,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/eslint-utils/download/eslint-utils-1.4.3.tgz
     version: 1.4.3
+  registry.nlark.com/eslint-utils/2.1.0:
+    dependencies:
+      eslint-visitor-keys: registry.nlark.com/eslint-visitor-keys/1.3.0
+    dev: true
+    engines:
+      node: '>=6'
+    name: eslint-utils
+    resolution:
+      integrity: sha1-0t5eA0JOcH3BDHQGjd7a5wh0Gyc=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/eslint-utils/download/eslint-utils-2.1.0.tgz
+    version: 2.1.0
   registry.nlark.com/eslint-visitor-keys/1.3.0:
     dev: true
     engines:
@@ -6248,14 +6475,6 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/fast-deep-equal/download/fast-deep-equal-3.1.3.tgz
     version: 3.1.3
-  registry.nlark.com/fast-diff/1.2.0:
-    dev: true
-    name: fast-diff
-    resolution:
-      integrity: sha1-c+4RmC2Gyq95WYKNUZz+kn+sXwM=
-      registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/fast-diff/download/fast-diff-1.2.0.tgz
-    version: 1.2.0
   registry.nlark.com/fast-glob/2.2.7:
     dependencies:
       '@mrmlnc/readdir-enhanced': registry.nlark.com/@mrmlnc/readdir-enhanced/2.2.1
@@ -6460,6 +6679,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/find-up/download/find-up-1.1.2.tgz?cache=0&sync_timestamp=1621233113658&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffind-up%2Fdownload%2Ffind-up-1.1.2.tgz
     version: 1.1.2
+  registry.nlark.com/find-up/2.1.0:
+    dependencies:
+      locate-path: registry.nlark.com/locate-path/2.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: find-up
+    resolution:
+      integrity: sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/find-up/download/find-up-2.1.0.tgz?cache=0&sync_timestamp=1621233113658&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffind-up%2Fdownload%2Ffind-up-2.1.0.tgz
+    version: 2.1.0
   registry.nlark.com/find-up/3.0.0:
     dependencies:
       locate-path: registry.nlark.com/locate-path/3.0.0
@@ -6703,16 +6934,6 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/get-intrinsic/download/get-intrinsic-1.1.1.tgz
     version: 1.1.1
-  registry.nlark.com/get-stdin/6.0.0:
-    dev: true
-    engines:
-      node: '>=4'
-    name: get-stdin
-    resolution:
-      integrity: sha1-ngm/cSs2CrkiXoEgSPcf3pyJZXs=
-      registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/get-stdin/download/get-stdin-6.0.0.tgz
-    version: 6.0.0
   registry.nlark.com/get-stream/3.0.0:
     dev: true
     engines:
@@ -7460,6 +7681,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/ignore/download/ignore-4.0.6.tgz
     version: 4.0.6
+  registry.nlark.com/ignore/5.1.8:
+    dev: true
+    engines:
+      node: '>= 4'
+    name: ignore
+    resolution:
+      integrity: sha1-8VCotQo0KJsz4i9YiavU2AFvDlc=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/ignore/download/ignore-5.1.8.tgz
+    version: 5.1.8
   registry.nlark.com/import-cwd/2.1.0:
     dependencies:
       import-from: registry.nlark.com/import-from/2.1.0
@@ -7622,6 +7853,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/internal-ip/download/internal-ip-4.3.0.tgz
     version: 4.3.0
+  registry.nlark.com/interpret/1.4.0:
+    dev: true
+    engines:
+      node: '>= 0.10'
+    name: interpret
+    resolution:
+      integrity: sha1-Zlq4vE2iendKQFhOgS4+D6RbGh4=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/interpret/download/interpret-1.4.0.tgz
+    version: 1.4.0
   registry.nlark.com/ip-regex/2.1.0:
     dev: true
     engines:
@@ -8512,6 +8753,21 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/lines-and-columns/download/lines-and-columns-1.1.6.tgz
     version: 1.1.6
+  registry.nlark.com/load-json-file/4.0.0:
+    dependencies:
+      graceful-fs: registry.nlark.com/graceful-fs/4.2.8
+      parse-json: registry.nlark.com/parse-json/4.0.0
+      pify: registry.nlark.com/pify/3.0.0
+      strip-bom: registry.nlark.com/strip-bom/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: load-json-file
+    resolution:
+      integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/load-json-file/download/load-json-file-4.0.0.tgz
+    version: 4.0.0
   registry.nlark.com/loader-fs-cache/1.0.3:
     dependencies:
       find-cache-dir: registry.nlark.com/find-cache-dir/0.1.1
@@ -8574,6 +8830,19 @@ packages:
       integrity: sha1-5MrOW4FtQloWa18JfhDNErNgZLA=
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/loader-utils/download/loader-utils-2.0.0.tgz?cache=0&sync_timestamp=1624608200945&other_urls=https%3A%2F%2Fregistry.nlark.com%2Floader-utils%2Fdownload%2Floader-utils-2.0.0.tgz
+    version: 2.0.0
+  registry.nlark.com/locate-path/2.0.0:
+    dependencies:
+      p-locate: registry.nlark.com/p-locate/2.0.0
+      path-exists: registry.nlark.com/path-exists/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: locate-path
+    resolution:
+      integrity: sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/locate-path/download/locate-path-2.0.0.tgz
     version: 2.0.0
   registry.nlark.com/locate-path/3.0.0:
     dependencies:
@@ -8774,6 +9043,14 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/md5.js/download/md5.js-1.3.5.tgz
     version: 1.3.5
+  registry.nlark.com/memory-fs/0.2.0:
+    dev: true
+    name: memory-fs
+    resolution:
+      integrity: sha1-8rslNovBIeORwlIN6Slpyu4KApA=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/memory-fs/download/memory-fs-0.2.0.tgz
+    version: 0.2.0
   registry.nlark.com/memory-fs/0.4.1:
     dependencies:
       errno: registry.nlark.com/errno/0.1.8
@@ -9718,6 +9995,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/p-finally/download/p-finally-2.0.1.tgz
     version: 2.0.1
+  registry.nlark.com/p-limit/1.3.0:
+    dependencies:
+      p-try: registry.nlark.com/p-try/1.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: p-limit
+    resolution:
+      integrity: sha1-uGvV8MJWkJEcdZD8v8IBDVSzzLg=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/p-limit/download/p-limit-1.3.0.tgz?cache=0&sync_timestamp=1628814272950&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fp-limit%2Fdownload%2Fp-limit-1.3.0.tgz
+    version: 1.3.0
   registry.nlark.com/p-limit/2.3.0:
     dependencies:
       p-try: registry.nlark.com/p-try/2.2.0
@@ -9730,6 +10019,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/p-limit/download/p-limit-2.3.0.tgz?cache=0&sync_timestamp=1628814272950&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fp-limit%2Fdownload%2Fp-limit-2.3.0.tgz
     version: 2.3.0
+  registry.nlark.com/p-locate/2.0.0:
+    dependencies:
+      p-limit: registry.nlark.com/p-limit/1.3.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: p-locate
+    resolution:
+      integrity: sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/p-locate/download/p-locate-2.0.0.tgz
+    version: 2.0.0
   registry.nlark.com/p-locate/3.0.0:
     dependencies:
       p-limit: registry.nlark.com/p-limit/2.3.0
@@ -9776,6 +10077,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/p-retry/download/p-retry-3.0.1.tgz
     version: 3.0.1
+  registry.nlark.com/p-try/1.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    name: p-try
+    resolution:
+      integrity: sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/p-try/download/p-try-1.0.0.tgz
+    version: 1.0.0
   registry.nlark.com/p-try/2.2.0:
     dev: true
     engines:
@@ -10112,6 +10423,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/pkg-dir/download/pkg-dir-1.0.0.tgz
     version: 1.0.0
+  registry.nlark.com/pkg-dir/2.0.0:
+    dependencies:
+      find-up: registry.nlark.com/find-up/2.1.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: pkg-dir
+    resolution:
+      integrity: sha1-9tXREJ4Z1j7fQo4L1X4Sd3YVM0s=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/pkg-dir/download/pkg-dir-2.0.0.tgz
+    version: 2.0.0
   registry.nlark.com/pkg-dir/3.0.0:
     dependencies:
       find-up: registry.nlark.com/find-up/3.0.0
@@ -10136,6 +10459,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/pkg-dir/download/pkg-dir-4.2.0.tgz
     version: 4.2.0
+  registry.nlark.com/pkg-up/2.0.0:
+    dependencies:
+      find-up: registry.nlark.com/find-up/2.1.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: pkg-up
+    resolution:
+      integrity: sha1-yBmscoBZpGHKscOImivjxJoATX8=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/pkg-up/download/pkg-up-2.0.0.tgz
+    version: 2.0.0
   registry.nlark.com/pnp-webpack-plugin/1.7.0:
     dependencies:
       ts-pnp: registry.nlark.com/ts-pnp/1.2.0
@@ -10707,18 +11042,6 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/prepend-http/download/prepend-http-1.0.4.tgz
     version: 1.0.4
-  registry.nlark.com/prettier-linter-helpers/1.0.0:
-    dependencies:
-      fast-diff: registry.nlark.com/fast-diff/1.2.0
-    dev: true
-    engines:
-      node: '>=6.0.0'
-    name: prettier-linter-helpers
-    resolution:
-      integrity: sha1-0j1B/hN1ZG3i0BBNNFSjAIgCz3s=
-      registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/prettier-linter-helpers/download/prettier-linter-helpers-1.0.0.tgz
-    version: 1.0.0
   registry.nlark.com/prettier/1.19.1:
     dev: true
     engines:
@@ -10731,17 +11054,6 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/prettier/download/prettier-1.19.1.tgz
     version: 1.19.1
-  registry.nlark.com/prettier/2.3.2:
-    dev: true
-    engines:
-      node: '>=10.13.0'
-    hasBin: true
-    name: prettier
-    resolution:
-      integrity: sha1-7ygKBewlNxLkhiM9tcbyNEHnNC0=
-      registry: https://registry.npm.taobao.org/
-      tarball: https://registry.nlark.com/prettier/download/prettier-2.3.2.tgz
-    version: 2.3.2
   registry.nlark.com/pretty-error/2.1.2:
     dependencies:
       lodash: registry.nlark.com/lodash/4.17.21
@@ -10994,6 +11306,20 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/range-parser/download/range-parser-1.2.1.tgz
     version: 1.2.1
+  registry.nlark.com/read-pkg/3.0.0:
+    dependencies:
+      load-json-file: registry.nlark.com/load-json-file/4.0.0
+      normalize-package-data: registry.nlark.com/normalize-package-data/2.5.0
+      path-type: registry.nlark.com/path-type/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: read-pkg
+    resolution:
+      integrity: sha1-nLxoaXj+5l0WwA4rGcI3/Pbjg4k=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/read-pkg/download/read-pkg-3.0.0.tgz
+    version: 3.0.0
   registry.nlark.com/read-pkg/5.2.0:
     dependencies:
       '@types/normalize-package-data': registry.nlark.com/@types/normalize-package-data/2.4.1
@@ -11139,6 +11465,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/regexpp/download/regexpp-2.0.1.tgz?cache=0&sync_timestamp=1624617169896&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregexpp%2Fdownload%2Fregexpp-2.0.1.tgz
     version: 2.0.1
+  registry.nlark.com/regexpp/3.2.0:
+    dev: true
+    engines:
+      node: '>=8'
+    name: regexpp
+    resolution:
+      integrity: sha1-BCWido2PI7rXDKS5BGH6LxIT4bI=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/regexpp/download/regexpp-3.2.0.tgz?cache=0&sync_timestamp=1624617169896&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregexpp%2Fdownload%2Fregexpp-3.2.0.tgz
+    version: 3.2.0
   registry.nlark.com/regexpu-core/4.7.1:
     dependencies:
       regenerate: registry.nlark.com/regenerate/1.4.2
@@ -12325,6 +12661,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/strip-ansi/download/strip-ansi-6.0.0.tgz
     version: 6.0.0
+  registry.nlark.com/strip-bom/3.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    name: strip-bom
+    resolution:
+      integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/strip-bom/download/strip-bom-3.0.0.tgz
+    version: 3.0.0
   registry.nlark.com/strip-eof/1.0.0:
     dev: true
     engines:
@@ -12463,6 +12809,16 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/table/download/table-5.4.6.tgz
     version: 5.4.6
+  registry.nlark.com/tapable/0.1.10:
+    dev: true
+    engines:
+      node: '>=0.6'
+    name: tapable
+    resolution:
+      integrity: sha1-KcNXB8K3DlDQdIK10gLo7URtr9Q=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/tapable/download/tapable-0.1.10.tgz
+    version: 0.1.10
   registry.nlark.com/tapable/1.1.3:
     dev: true
     engines:
@@ -12728,6 +13084,18 @@ packages:
       registry: https://registry.npm.taobao.org/
       tarball: https://registry.nlark.com/ts-pnp/download/ts-pnp-1.2.0.tgz
     version: 1.2.0
+  registry.nlark.com/tsconfig-paths/3.10.1:
+    dependencies:
+      json5: registry.nlark.com/json5/2.2.0
+      minimist: registry.nlark.com/minimist/1.2.5
+      strip-bom: registry.nlark.com/strip-bom/3.0.0
+    dev: true
+    name: tsconfig-paths
+    resolution:
+      integrity: sha1-ea5npowVKJ/fXFHLdPOXUi15Xtc=
+      registry: https://registry.npm.taobao.org/
+      tarball: https://registry.nlark.com/tsconfig-paths/download/tsconfig-paths-3.10.1.tgz
+    version: 3.10.1
   registry.nlark.com/tslib/1.14.1:
     dev: true
     name: tslib
@@ -13823,13 +14191,15 @@ specifiers:
   '@vue/cli-plugin-eslint': ~4.5.0
   '@vue/cli-plugin-router': ~4.5.0
   '@vue/cli-service': ~4.5.0
-  '@vue/eslint-config-prettier': ^6.0.0
+  '@vue/eslint-config-standard': ^5.1.2
   babel-eslint: ^10.1.0
   core-js: ^3.6.5
   eslint: ^6.7.2
-  eslint-plugin-prettier: ^3.3.1
+  eslint-plugin-import: ^2.20.2
+  eslint-plugin-node: ^11.1.0
+  eslint-plugin-promise: ^4.2.1
+  eslint-plugin-standard: ^4.0.0
   eslint-plugin-vue: ^6.2.2
-  prettier: ^2.2.1
   sass: ^1.26.5
   sass-loader: ^8.0.2
   vue: ^2.6.11

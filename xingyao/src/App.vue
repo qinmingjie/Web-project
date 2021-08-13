@@ -1,7 +1,17 @@
 <template>
   <div id="app">
-    <h1>hello</h1>
+    <Header></Header>
+    <router-view></router-view>
   </div>
 </template>
-
-<style lang="scss"></style>
+<script>
+import Header from './components/Header.vue'
+export default {
+  name: 'my-home',
+  components: {
+    Header
+  }
+}
+</script>
+<style lang="scss">
+</style>
