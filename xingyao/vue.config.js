@@ -4,5 +4,5 @@ module.exports = {
     hot: true,
     port: 3000
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/webproject/xingyao/dist' : '/webproject/xingyao/dist',
 }
