@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     initSwiper () {
-      const swiper = new Swiper('.swiper-container', {
+      const banner = new Swiper('.swiper-container', {
         autoplay: {
           disableOnInteraction: false
         },
