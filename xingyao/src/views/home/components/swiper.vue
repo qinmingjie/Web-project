@@ -76,7 +76,6 @@ export default {
   },
   methods: {
     initSwiper () {
-      // eslint-disable-next-line no-unused-vars
       const swiper = new Swiper('.swiper-container', {
         autoplay: {
           disableOnInteraction: false
@@ -204,6 +203,8 @@ export default {
 
 #elpagination {
   bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #elpagination span {
