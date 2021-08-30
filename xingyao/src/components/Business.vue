@@ -3,139 +3,43 @@
   <div class="business">
     <div class="center">
       <p class="business-title fs40">35000+家企业的信赖之选</p>
-      <div class="business-content business-content1">
-        <div class="business-item">
+      <div class="business-content" :class="'business-content' + num" v-for="num of busnum" :key="num">
+        <div class="business-item" v-for="itme in verify(1)" :key="itme">
           <span class="business-icon"></span>
-          <p class="business-name fs15">腾讯</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">京东</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">今日头条</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">58到家</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">新东方</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">3节课</p>
-        </div>
-      </div>
-      <div class="business-content business-content2">
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">唯品会</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">华安保险</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">斑马</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">喜马拉雅</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">宝洁</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">学而思</p>
-        </div>
-      </div>
-      <div class="business-content business-content3">
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">爱奇艺</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">每日优鲜</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">作业帮</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">元气森林</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">猿辅导</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">携程</p>
-        </div>
-      </div>
-      <div class="business-content business-content4">
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">交个朋友</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">美团</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">转转</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">百度健康</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">智联招聘</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">苏泊尔</p>
-        </div>
-      </div>
-      <div class="business-content business-content5">
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">混沌大学</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">蘑菇街</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">金山文档</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">幸福西饼</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">美的</p>
-        </div>
-        <div class="business-item">
-          <span class="business-icon"></span>
-          <p class="business-name fs15">橙心优选</p>
+          <p class="business-name fs15">{{ itme }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  name: 'my-business',
+  props: {
+    business: {
+      type: Array
+    }
+  },
+  created () {
+    console.log(this.business.length / 6)
+  },
+  methods: {
+    verify (num) {
+      const newbus = this.business.filter((itme, index, array) => {
+        if (index >= (num - 1) * 6 && index < num * 6) {
+          return itme
+        }
+      })
+      return newbus
+    }
+  },
+  computed: {
+    busnum () {
+      return this.business.length / 6
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 @import "@/static/css/rest.scss";
 /*合作企业*/
@@ -144,7 +48,6 @@
   padding-bottom: 94px;
   color: #333;
 }
-
 .business-title {
   text-align: center;
   font-weight: 700;
@@ -189,23 +92,23 @@
 }
 
 .business-content .business-item:nth-of-type(2) .business-icon {
-  background-position: -201px 0;
+  background-position: -200px 0;
 }
 
 .business-content .business-item:nth-of-type(3) .business-icon {
-  background-position: -402px 0;
+  background-position: -400px 0;
 }
 
 .business-content .business-item:nth-of-type(4) .business-icon {
-  background-position: -603px 0;
+  background-position: -600px 0;
 }
 
 .business-content .business-item:nth-of-type(5) .business-icon {
-  background-position: -804px 0;
+  background-position: -800px 0;
 }
 
 .business-content .business-item .business-icon {
-  background-position: -1005px 0;
+  background-position: -1000px 0;
 }
 
 .business-content .business-item p {
@@ -222,98 +125,98 @@
 }
 
 .business-content2 .business-item .business-icon {
-  background-position: 0 -101px;
+  background-position: 0 -100px;
 }
 
 .business-content2 .business-item:nth-of-type(2) .business-icon {
-  background-position: -201px -101px;
+  background-position: -200px -100px;
 }
 
 .business-content2 .business-item:nth-of-type(3) .business-icon {
-  background-position: -402px -101px;
+  background-position: -400px -100px;
 }
 
 .business-content2 .business-item:nth-of-type(4) .business-icon {
-  background-position: -603px -101px;
+  background-position: -600px -100px;
 }
 
 .business-content2 .business-item:nth-of-type(5) .business-icon {
-  background-position: -804px -101px;
+  background-position: -800px -100px;
 }
 
 .business-content2 .business-item:nth-of-type(6) .business-icon {
-  background-position: -1005px -101px;
+  background-position: -1000px -100px;
 }
 
 .business-content3 .business-item .business-icon {
-  background-position: 0 -202px;
+  background-position: 0 -200px;
 }
 
 .business-content3 .business-item:nth-of-type(2) .business-icon {
-  background-position: -201px -202px;
+  background-position: -200px -200px;
 }
 
 .business-content3 .business-item:nth-of-type(3) .business-icon {
-  background-position: -402px -202px;
+  background-position: -400px -200px;
 }
 
 .business-content3 .business-item:nth-of-type(4) .business-icon {
-  background-position: -603px -202px;
+  background-position: -600px -200px;
 }
 
 .business-content3 .business-item:nth-of-type(5) .business-icon {
-  background-position: -804px -202px;
+  background-position: -800px -200px;
 }
 
 .business-content3 .business-item:nth-of-type(6) .business-icon {
-  background-position: -1005px -202px;
+  background-position: -1000px -200px;
 }
 
 .business-content4 .business-item .business-icon {
-  background-position: 0 -303px;
+  background-position: 0 -300px;
 }
 
 .business-content4 .business-item:nth-of-type(2) .business-icon {
-  background-position: -201px -303px;
+  background-position: -200px -300px;
 }
 
 .business-content4 .business-item:nth-of-type(3) .business-icon {
-  background-position: -402px -303px;
+  background-position: -400px -300px;
 }
 
 .business-content4 .business-item:nth-of-type(4) .business-icon {
-  background-position: -603px -303px;
+  background-position: -600px -300px;
 }
 
 .business-content4 .business-item:nth-of-type(5) .business-icon {
-  background-position: -804px -303px;
+  background-position: -800px -300px;
 }
 
 .business-content4 .business-item:nth-of-type(6) .business-icon {
-  background-position: -1005px -303px;
+  background-position: -1000px -300px;
 }
 
 .business-content5 .business-item .business-icon {
-  background-position: 0 -404px;
+  background-position: 0 -400px;
 }
 
 .business-content5 .business-item:nth-of-type(2) .business-icon {
-  background-position: -201px -404px;
+  background-position: -200px -400px;
 }
 
 .business-content5 .business-item:nth-of-type(3) .business-icon {
-  background-position: -402px -404px;
+  background-position: -400px -400px;
 }
 
 .business-content5 .business-item:nth-of-type(4) .business-icon {
-  background-position: -603px -404px;
+  background-position: -600px -400px;
 }
 
 .business-content5 .business-item:nth-of-type(5) .business-icon {
-  background-position: -804px -404px;
+  background-position: -800px -400px;
 }
 
 .business-content5 .business-item:nth-of-type(6) .business-icon {
-  background-position: -1005px -404px;
+  background-position: -1000px -400px;
 }
 </style>

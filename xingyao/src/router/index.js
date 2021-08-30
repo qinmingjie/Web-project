@@ -19,10 +19,6 @@ const routes = [
     name: 'Collage',
     component: Collage
   }, {
-    path: '/collage',
-    name: 'Collage',
-    component: Collage
-  }, {
     path: '/qvcollage',
     name: 'Qvcollage',
     component: Qvcollage
