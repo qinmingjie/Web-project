@@ -32,14 +32,12 @@ export default {
       this.$refs.minute.style.transform = `rotate(${6 * minute + 0.1 * seconds}deg) translate(-50%, -90%)`
       this.$refs.hour.style.transform = `rotate(${30 * hour + 0.5 * minute}deg) translate(-50%, -90%)`
       setInterval(() => {
-        const newDate = new Date()
-        seconds = newDate.getSeconds()
-        if (seconds / 60 === 0) {
-          minute++
-          // this.$refs.minute.style.transform = `rotate(${6 * minute}deg) translate(-50%, -90%)`
-        } else if (minute === 0) {
-          hour++
-          // this.$refs.hour.style.transform = `rotate(${30 * hour}deg) translate(-50%, -90%)`
+        seconds++
+        if (seconds % 60 === 1) {
+          seconds = 1
+          minute += 1
+        } else if (minute % 60 === 1) {
+          hour += 1
         }
         this.$refs.seconds.style.transform = `rotate(${6 * seconds}deg) translate(-50%, -90%)`
         this.$refs.minute.style.transform = `rotate(${6 * minute + 0.1 * seconds}deg) translate(-50%, -90%)`
@@ -237,7 +235,7 @@ body {
   transform-origin: 0 0;
   transform: translate(-50%, -90%);
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1100px) {
   .oclock {
     width: 400 * $width + vw;
     height: 400 * $width + vw;
