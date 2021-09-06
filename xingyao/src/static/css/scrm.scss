@@ -1,0 +1,68 @@
+@import './rest.scss';
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.section-txt {
+  width: 47%;
+}
+.section-txt .section-txt-itme div {
+  flex: 0.95;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.section-txt .section-txt-itme {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 29px;
+  cursor: pointer;
+}
+.section-txt .title {
+  font-weight: 700;
+  margin-bottom: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  line-height: normal;
+}
+.section-txt .info {
+  min-height: 60px;
+  max-height: 100px;
+  border-bottom: 1px dashed #BFBFBF;
+}
+.section-txt .section-txt-icon {
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  background-image: url(../../../assets/img/scrm/scrm-icon.png);
+  background-repeat: no-repeat;
+  background-size: 500% auto;
+  background-position: center center;
+}
+.section-txt .section-txt-itme:last-child {
+  margin-bottom: 0;
+}
+.section-txt > div:hover .title,
+.section-txt > div:hover .info {
+  color: $themes-color;
+}
+.section-txt-itme.hover .title,
+.section-txt-itme.hover .info{
+  color: $themes-color;
+}
+.section-img {
+  width: 49%;
+  object-fit: contain;
+}
+.getuser-section .section-img {
+  display: none;
+}
+.getuser-section .section-img.show {
+  display: block;
+}

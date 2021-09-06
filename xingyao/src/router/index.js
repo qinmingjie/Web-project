@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/home/Index.vue'
-const Collage = () => import('../views/collage/Index.vue')
-const Qvcollage = () => import('../views/qv_collage/Index.vue')
-const Plan = () => import('../views/plan/Index.vue')
-const Gzh = () => import('../views/gzh/Index.vue')
-const Scrm = () => import('../views/scrm/Index.vue')
+import Home from '../views/home/index.vue'
+const Collage = () => import('../views/collage/index.vue')
+const Qvcollage = () => import('../views/qv_collage/index.vue')
+const Plan = () => import('../views/plan/index.vue')
+const Gzh = () => import('../views/gzh/index.vue')
+const Scrm = () => import('../views/scrm/index.vue')
 
 Vue.use(VueRouter)
 

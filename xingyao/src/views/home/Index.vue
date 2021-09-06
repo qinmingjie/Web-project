@@ -1,22 +1,22 @@
 <template>
   <div>
-    <Swiper></Swiper>
-    <Product></Product>
-    <Operat></Operat>
-    <Qv></Qv>
-    <Exams></Exams>
-    <Business :business="business"></Business>
-    <Power></Power>
+    <swiper></swiper>
+    <product></product>
+    <operat></operat>
+    <qv></qv>
+    <exams></exams>
+    <business :business="business"></business>
+    <power></power>
   </div>
 </template>
 <script>
 import Swiper from './components/swiper.vue'
 import Product from './components/product.vue'
-import Operat from './components/Operat.vue'
-import Qv from './components/Qv.vue'
-import Exams from './components/Exams.vue'
+import Operat from './components/operat.vue'
+import Qv from './components/qv.vue'
+import Exams from './components/exams.vue'
 import Business from '../../components/Business.vue'
-import Power from './components/Power.vue'
+import Power from './components/power.vue'
 export default {
   name: 'my-home',
   components: {
